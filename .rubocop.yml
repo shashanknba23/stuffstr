@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'test/**/*'
+    - 'Gemfile'
+    - 'model/application_record.rb'
+Documentation:
+  Enabled: true
+Rails:
+  Enabled: true
+Bundler/GemComment:
+  Enabled: true
+Style/DocumentationMethod:
+  Enabled: true
