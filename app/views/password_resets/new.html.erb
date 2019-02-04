@@ -1,0 +1,21 @@
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>Password reset Page</h2>
+    <p>You can reset your password from here.</p>
+  </div>
+</div>
+
+
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+  	<div class="register-form">
+			<%= form_tag password_resets_path, :method => :post do %>
+			  <div class="form-group">
+			    <%= label_tag :email %>
+			    <%= text_field_tag :email, params[:email] %>
+			  </div>
+			  <div><%= submit_tag "Reset Password", class: "btn btn-black" %></div>
+			<% end %>
+    </div>
+  </div>
+</div>
