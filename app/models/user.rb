@@ -2,6 +2,9 @@ class User < ApplicationRecord
 	has_secure_password
 	before_create { generate_token(:auth_token) }
 
+	has_one :user_role
+	has_one :role, through: :user_role
+
 	def send_password_reset
 	  generate_token(:password_reset_token)
 	  self.password_reset_sent_at = Time.zone.now
